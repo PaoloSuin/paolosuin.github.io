@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Paolo Suin — astrophysicist studying star formation, stellar feedback, molecular clouds, magnetic fields, and the connection between simulations and observations." />
+  <meta name="theme-color" content="#071013" />
+  <meta property="og:title" content="Paolo Suin — Astrophysicist" />
+  <meta property="og:description" content="Numerical astrophysics across scales: from molecular clouds and filaments to clumps, cores and stellar clusters." />
+  <meta property="og:type" content="website" />
+  <title>Paolo Suin — Astrophysicist</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="cloud-canvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Paolo Suin home">
+      <span class="brand-mark">PS</span>
+      <span class="brand-name">Paolo Suin</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#research">Research</a>
+      <a href="#publications">Papers</a>
+      <a href="#trajectory">Trajectory</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <button class="menu-button" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span>
+        <span class="sr-only">Menu</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="#research">Research</a>
+    <a href="#publications">Papers</a>
+    <a href="#trajectory">Trajectory</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> Astrophysicist · CEA Paris-Saclay / IRFU</p>
+        <h1>I simulate how stars <span class="gradient-text">reshape the clouds</span> that make them.</h1>
+        <p class="hero-lede">
+          I am Paolo Suin, a postdoctoral researcher working on star formation across scales.
+          I use numerical simulations and synthetic observations to connect the physics of
+          molecular clouds, filaments, clumps and stellar clusters to what telescopes actually see.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#research">Explore my research <span aria-hidden="true">↘</span></a>
+          <a class="button ghost" href="#publications">Selected papers</a>
+        </div>
+
+        <div class="quick-links" aria-label="Academic profiles">
+          <a href="https://orcid.org/0000-0002-3031-062X" target="_blank" rel="noreferrer">ORCID <span>↗</span></a>
+          <a href="https://arxiv.org/search/?query=Paolo+Suin&searchtype=author" target="_blank" rel="noreferrer">arXiv <span>↗</span></a>
+          <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Suin%2C%20Paolo%22" target="_blank" rel="noreferrer">NASA ADS <span>↗</span></a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Illustration of scales in star formation">
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="scale-map">
+          <div class="scale-node node-cloud" data-label="cloud">
+            <span class="node-dot"></span>
+            <span class="node-text"><b>10–100 pc</b> molecular clouds</span>
+          </div>
+          <div class="scale-node node-filament" data-label="filament">
+            <span class="node-dot"></span>
+            <span class="node-text"><b>pc</b> filaments & clumps</span>
+          </div>
+          <div class="scale-node node-dense" data-label="core">
+            <span class="node-dot"></span>
+            <span class="node-text"><b>0.01–0.1 pc</b> cores</span>
+          </div>
+          <div class="ion-bubble"><span>H II</span></div>
+          <div class="star star-a">✦</div>
+          <div class="star star-b">✧</div>
+          <div class="star star-c">✦</div>
+          <svg class="flow-lines" viewBox="0 0 600 600" aria-hidden="true">
+            <path d="M74 370 C180 260 260 325 330 245 S460 125 528 194"/>
+            <path d="M92 404 C176 333 244 404 321 333 S437 240 506 264"/>
+            <path d="M122 446 C215 430 252 475 343 424 S460 362 528 378"/>
+          </svg>
+        </div>
+        <div class="visual-caption"><span></span> One problem, many physical scales</div>
+      </div>
+    </section>
+
+    <section class="marquee-wrap" aria-label="Research topics">
+      <div class="marquee-track">
+        <span>STAR FORMATION</span><i>✦</i><span>STELLAR FEEDBACK</span><i>✦</i><span>MHD</span><i>✦</i><span>MOLECULAR CLOUDS</span><i>✦</i><span>SYNTHETIC OBSERVATIONS</span><i>✦</i><span>STAR CLUSTERS</span><i>✦</i>
+        <span>STAR FORMATION</span><i>✦</i><span>STELLAR FEEDBACK</span><i>✦</i><span>MHD</span><i>✦</i><span>MOLECULAR CLOUDS</span><i>✦</i><span>SYNTHETIC OBSERVATIONS</span><i>✦</i><span>STAR CLUSTERS</span><i>✦</i>
+      </div>
+    </section>
+
+    <section class="section-shell section" id="research">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Research</p>
+        <h2>From galactic environment to individual stars.</h2>
+        <p>I am interested in the physical links that survive—or disappear—as star formation moves from large scales to small ones.</p>
+      </div>
+
+      <div class="research-grid">
+        <article class="research-card card-large reveal">
+          <div class="card-index">01</div>
+          <div class="card-visual feedback-visual" aria-hidden="true">
+            <div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div>
+            <div class="filament f1"></div><div class="filament f2"></div><div class="filament f3"></div>
+          </div>
+          <div class="card-body">
+            <p class="card-kicker">Feedback across scales</p>
+            <h3>How do massive stars regulate the clouds that form them?</h3>
+            <p>Radiation, H II regions and protostellar outflows reshape gas morphology, efficiencies and the star-formation law. I study when feedback suppresses star formation, when it redistributes it, and which signatures survive observational biases.</p>
+            <div class="tags"><span>Radiation-MHD</span><span>H II regions</span><span>Jets</span></div>
+          </div>
+        </article>
+
+        <article class="research-card reveal">
+          <div class="card-index">02</div>
+          <div class="card-body">
+            <p class="card-kicker">Structure + magnetic fields</p>
+            <h3>What sets the architecture of star-forming gas?</h3>
+            <p>I follow the evolution of filamentary networks and dense structures to understand how gravity, turbulence, magnetic fields and feedback compete to organize molecular clouds.</p>
+            <div class="mini-diagram field-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><i></i></div>
+            <div class="tags"><span>Filaments</span><span>Magnetic fields</span><span>Topology</span></div>
+          </div>
+        </article>
+
+        <article class="research-card reveal">
+          <div class="card-index">03</div>
+          <div class="card-body">
+            <p class="card-kicker">Cloud → clump populations</p>
+            <h3>How much does large-scale environment matter?</h3>
+            <p>Using kpc-scale simulations, I extract self-consistent populations of star-forming structures and test which cloud-scale conditions propagate into clump properties and star-formation rates.</p>
+            <div class="mini-diagram population-plot" aria-hidden="true"><span class="p p1"></span><span class="p p2"></span><span class="p p3"></span><span class="p p4"></span><span class="p p5"></span><span class="trend"></span></div>
+            <div class="tags"><span>kpc simulations</span><span>Clumps</span><span>Scaling laws</span></div>
+          </div>
+        </article>
+
+        <article class="research-card card-wide reveal">
+          <div class="card-index">04</div>
+          <div class="card-body split-body">
+            <div>
+              <p class="card-kicker">Simulations ↔ observations</p>
+              <h3>Make theory observable.</h3>
+            </div>
+            <div>
+              <p>I build analysis pipelines and synthetic observations designed to compare simulations and surveys on equal footing—from cloud statistics to ALMA-scale fragmentation.</p>
+              <div class="tags"><span>POLARIS</span><span>ALMA</span><span>Herschel</span><span>RAMSES</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell section papers-section" id="publications">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Selected publications</p>
+        <h2>A few papers that define the thread.</h2>
+      </div>
+
+      <div class="paper-list">
+        <article class="paper reveal">
+          <button class="paper-head" type="button" aria-expanded="false">
+            <span class="paper-year">2025</span>
+            <span class="paper-title-wrap">
+              <span class="paper-title">The role of magnetic field and stellar feedback in the evolution of filamentary structures in collapsing star-forming clouds</span>
+              <span class="paper-meta">P. Suin, D. Arzoumanian, A. Zavagno, P. Hennebelle · Astronomy & Astrophysics</span>
+            </span>
+            <span class="paper-toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="paper-detail">
+            <div class="paper-detail-inner">
+              <p>Two magnetized cloud simulations reveal distinct pathways for filament evolution before feedback, followed by strong restructuring once H II regions expand through the cloud.</p>
+              <div class="paper-links"><a href="https://arxiv.org/abs/2505.02903" target="_blank" rel="noreferrer">arXiv ↗</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="paper reveal">
+          <button class="paper-head" type="button" aria-expanded="false">
+            <span class="paper-year">2024</span>
+            <span class="paper-title-wrap">
+              <span class="paper-title">Stellar feedback in the star formation–gas density relation: Comparison between simulations and observations</span>
+              <span class="paper-meta">P. Suin, A. Zavagno, T. Colman, P. Hennebelle, A. Verliat, D. Russeil · A&A 682, A76</span>
+            </span>
+            <span class="paper-toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="paper-detail">
+            <div class="paper-detail-inner">
+              <p>Radiative feedback changes the star-formation relation primarily through its impact on cloud structure, while protostellar jets strongly reduce the star-formation rate. Mimicking observational limitations also reconciles part of the simulation–observation discrepancy.</p>
+              <div class="paper-links"><a href="https://arxiv.org/abs/2311.18522" target="_blank" rel="noreferrer">arXiv ↗</a><a href="https://doi.org/10.1051/0004-6361/202347527" target="_blank" rel="noreferrer">A&A ↗</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="paper reveal">
+          <button class="paper-head" type="button" aria-expanded="false">
+            <span class="paper-year">2022</span>
+            <span class="paper-title-wrap">
+              <span class="paper-title">Environmental effects on the dynamical evolution of star clusters in turbulent molecular clouds</span>
+              <span class="paper-meta">P. Suin, S. N. Shore, V. Pavlík · A&A 667, A69</span>
+            </span>
+            <span class="paper-toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="paper-detail">
+            <div class="paper-detail-inner">
+              <p>Coupled N-body and hydrodynamical experiments show that the turbulent gas surrounding a young cluster can accelerate structural evolution and produce dynamics that differ substantially from isolated cluster models.</p>
+              <div class="paper-links"><a href="https://arxiv.org/abs/2207.01634" target="_blank" rel="noreferrer">arXiv ↗</a><a href="https://doi.org/10.1051/0004-6361/202243579" target="_blank" rel="noreferrer">A&A ↗</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="paper reveal">
+          <button class="paper-head" type="button" aria-expanded="false">
+            <span class="paper-year">2025</span>
+            <span class="paper-title-wrap">
+              <span class="paper-title">The Rosetta Stone project: radiative-MHD simulations and ALMA synthetic observations of high-mass star-forming clumps</span>
+              <span class="paper-meta">Collaboration papers · simulation-to-observation framework</span>
+            </span>
+            <span class="paper-toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="paper-detail">
+            <div class="paper-detail-inner">
+              <p>A coordinated framework for testing high-mass star-formation models by processing radiative-MHD simulations through realistic synthetic observing pipelines and comparing them directly with ALMA data.</p>
+              <div class="paper-links"><a href="https://arxiv.org/abs/2507.08436" target="_blank" rel="noreferrer">Project I ↗</a><a href="https://arxiv.org/abs/2507.11032" target="_blank" rel="noreferrer">Project III ↗</a></div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="all-papers reveal">
+        <p>For the complete and current publication record:</p>
+        <a class="text-link" href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Suin%2C%20Paolo%22" target="_blank" rel="noreferrer">Open NASA ADS <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="section-shell section" id="trajectory">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Trajectory</p>
+        <h2>Following the problem across scales.</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-date">2025 — now</div>
+          <div class="timeline-content"><h3>Postdoctoral researcher</h3><p>CEA Paris-Saclay · IRFU</p><p>Large-scale simulations, cloud and clump populations, star-formation regulation, and direct simulation–observation comparisons.</p></div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="timeline-date">2022 — 2025</div>
+          <div class="timeline-content"><h3>PhD in Astrophysics</h3><p>Aix-Marseille University · Laboratoire d'Astrophysique de Marseille</p><p><em>Impact of high-mass stars' feedback on star formation properties.</em> Supervisor: Annie Zavagno.</p></div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="timeline-date">before 2022</div>
+          <div class="timeline-content"><h3>Physics & astrophysics</h3><p>University of Pisa</p><p>Early work on the dynamical evolution of young star clusters embedded in turbulent molecular clouds.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell section contact-section" id="contact">
+      <div class="contact-panel reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Stars are complicated.<br/>Conversations help.</h2>
+        <p class="contact-copy">I’m always happy to talk about star formation, numerical methods, simulation–observation comparisons, or possible collaborations.</p>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:paolo.suin@lam.fr">Send an email <span>↗</span></a>
+          <a class="button ghost" href="https://orcid.org/0000-0002-3031-062X" target="_blank" rel="noreferrer">ORCID</a>
+        </div>
+        <p class="contact-note">Current affiliation: CEA Paris-Saclay / IRFU · France</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <p>© <span id="year"></span> Paolo Suin</p>
+    <p>Built for GitHub Pages · <a href="#top">Back to top ↑</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
