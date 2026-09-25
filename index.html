@@ -109,7 +109,7 @@
   /* sections */
   section { padding-top: 48px; }
   .label {
-    font: 500 12px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase;
+    font: 500 14px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--accent); margin: 0 0 8px;
   }
   h2 { font: 650 26px/32px var(--display); letter-spacing: -0.02em; margin: 0 0 16px; }
@@ -192,6 +192,8 @@
   .plist .links a:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
   nav a.active { color: var(--ink); }
   .label.lone { margin-bottom: 16px; }
+  .contactline { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; margin: 0; color: var(--ink); }
+  .contactline .sep { color: var(--muted); }
 </style>
 </head>
 <body>
@@ -203,7 +205,7 @@
         <ul>
           <li><a href="#research">research</a></li>
           <li><a href="#papers">publications</a></li>
-          <li><a href="#contact">contact</a></li>
+          <li><a href="#contact">get in touch</a></li>
           <li><a href="#about">about me</a></li>
           <li><a href="cv.pdf" target="_blank" rel="noopener">cv</a></li>
         </ul>
@@ -222,6 +224,7 @@
       <div>
         <p>I study how stars form using high-resolution magnetohydrodynamic simulations of molecular clouds. I'm especially interested in stellar feedback: how jets and the radiation of massive stars shape filaments, dense hubs and young clusters, and how efficiently clouds turn into stars.</p>
         <p>I studied at the University of Pisa and have worked with colleagues at the Laboratoire d'Astrophysique de Marseille (LAM) and CEA Paris-Saclay.</p>
+        <p class="contactline" id="contact"><span>paolo.suin [at] example.org</span><span class="sep">·</span><a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a></p>
       </div>
       <div class="avatar" role="img" aria-label="Photo placeholder">PS</div>
     </div>
@@ -282,20 +285,8 @@
       <a class="ads" href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Suin%2C%20P.%22&amp;sort=date%20desc" target="_blank" rel="noopener">NASA ADS</a>
     </section>
 
-    <section id="contact">
-      <p class="label">Contact</p>
-      <h2>Get in touch</h2>
-      <dl class="contact card">
-        <dt>Email</dt>
-        <dd>paolo.suin [at] example.org</dd>
-        <dt>Scholar</dt>
-        <dd><a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a></dd>
-      </dl>
-    </section>
-
     <section id="about">
-      <p class="label">About me</p>
-      <h2>Beyond the simulations</h2>
+      <p class="label lone">About me</p>
       <div class="card">
         <p style="margin-bottom:0">A few lines about who I am outside research: where I'm from, what I do in my free time, and what keeps me curious.</p>
       </div>
@@ -306,7 +297,6 @@
 <div id="papers" class="view" hidden>
   <main>
     <h1 class="pagetitle">Publications</h1>
-    <p class="role">All papers in reverse chronological order. <u class="me">My name</u> is underlined.</p>
     <section class="yearblock"><h2 class="year">2026</h2><ol class="plist">
       <li><p class="pt">The 10–15 GHz radio continuum survey of the Galactic Plane with SKAO</p><div class="pa">A. Bracco, A. Ingallinera, A. J. T. Ramaila, …, <u class="me">P. Suin</u>, … <span class="n">(65 authors)</span></div><div class="pv">Chapter in <i>Advancing Astrophysics with the SKA II</i>, arXiv:2606.26278, 2026</div><div class="links"><a href="https://arxiv.org/abs/2606.26278" target="_blank" rel="noopener">arXiv</a></div></li>
       <li><p class="pt">MXDFz4.4: A LyC emitter 250 Myr after the epoch of reionization and a first test of Lyα morphology as a tracer of LyC escape at high redshift</p><div class="pa">I. Goovaerts, M. Rafelski, A. Beckett, …, <u class="me">P. Suin</u>, … <span class="n">(17 authors)</span></div><div class="pv"><i>The Astrophysical Journal</i>, 2026</div><div class="links"><a href="https://arxiv.org/abs/2603.04517" target="_blank" rel="noopener">arXiv</a><a href="https://doi.org/10.3847/1538-4357/ae75b0" target="_blank" rel="noopener">DOI</a></div></li>
