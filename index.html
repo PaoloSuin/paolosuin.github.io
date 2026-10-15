@@ -81,10 +81,10 @@
   /* intro */
   main { padding-top: 48px; }
   .role { margin: 8px 0 0; color: var(--muted); font-size: 17px; line-height: 24px; }
-  .intro { display: grid; grid-template-columns: 1fr 184px; gap: 32px; align-items: start; margin-top: 24px; }
+  .intro { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 32px; align-items: start; margin-top: 24px; }
   .intro p { margin: 0 0 16px; }
   .avatar {
-  width: 184px;
+  width: 220px;
   max-width: 100%;
   height: auto;
   border-radius: 14px;
@@ -169,7 +169,7 @@
   @media (max-width: 680px) {
     main { padding-top: 32px; }
     .intro { grid-template-columns: 1fr; gap: 20px; }
-    .avatar { width: 120px; font-size: 32px; order: -1; }
+    .avatar { width: 180px; order: -1; }
     .contact { grid-template-columns: 1fr; gap: 2px; }
     .contact dd { margin-bottom: 12px; }
     nav ul { gap: 14px; }
@@ -207,8 +207,7 @@
           <li><a href="#research">research</a></li>
           <li><a href="#papers">publications</a></li>
           <li><a href="#contact">get in touch</a></li>
-          <li><a href="#about">about me</a></li>
-          <li><a href="cv.pdf" target="_blank" rel="noopener">cv</a></li>
+          <li><a href="cv.pdf" download="Paolo_Suin_CV.pdf">cv</a></li>
         </ul>
       </nav>
       <button class="tog" id="themeToggle" type="button" aria-label="Toggle light or dark theme">Dark</button>
@@ -285,13 +284,6 @@
       <a class="ads" href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Suin%2C%20P.%22&amp;sort=date%20desc" target="_blank" rel="noopener">NASA ADS</a>
     </section>
 
-    <section id="about">
-      <p class="label lone">About me</p>
-      <div class="card">
-        <p style="margin-bottom:0">A few lines about who I am outside research: where I'm from, what I do in my free time, and what keeps me curious.</p>
-      </div>
-      <p class="note">Placeholder: tell me about your hobbies, interests and background and I'll write this section.</p>
-    </section>
   </main>
 </div>
 <div id="papers" class="view" hidden>
