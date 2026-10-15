@@ -84,14 +84,13 @@
   .intro { display: grid; grid-template-columns: 1fr 184px; gap: 32px; align-items: start; margin-top: 24px; }
   .intro p { margin: 0 0 16px; }
   .avatar {
-    width: 184px; max-width: 100%; aspect-ratio: 1; border-radius: 50%;
-    background: var(--surface);
-    border: 1px solid var(--rule);
-    display: grid; place-items: center;
-    font: 650 40px/1 var(--display); color: var(--ink); letter-spacing: -0.02em;
-    object-fit: cover;
-    object-position: center;
-  }
+  width: 184px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--rule);
+  display: block;
+}
   h1 {
     font: 650 clamp(40px, 7vw, 60px)/1.02 var(--display); letter-spacing: -0.03em;
     margin: 0; text-wrap: balance;
@@ -227,7 +226,7 @@
 <p>Hi! I’m an astrophysicist at CEA Paris-Saclay, where I use numerical simulations to study how stars form. My studies revolve around the fascinating circular nature of the process. I follow how gas assembles into clouds from the chaotic interstellar medium, how those clouds collapse under their own gravity, and how stars are formed along the way. Then the loop closes, and the new stars, through their feedback, restructure the natal environment and stir energy and turbulence into the interstellar medium, setting the stage for the next generation. That is the story I try to piece together, one simulation at a time.</p>
         <p class="contactline" id="contact"><span>paolo.suin [at] gmail.com</span><span class="sep">·</span><a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a></p>
       </div>
-      <img class="avatar" src="photo.jpg" alt="Paolo Suin">
+      <img class="avatar" src="photo.jpeg" alt="Paolo Suin">
     </div>
 
 <section id="research">
