@@ -8,6 +8,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+/* Laptop: move the portrait upwards */
+.intro .avatar {
+  position: relative;
+  top: -100px;
+}
+
+/* Phone: stack the portrait without an upward offset */
+@media (max-width: 680px) {
+  .intro .avatar {
+    top: 0;
+    margin-top: 0;
+    transform: none;
+  }
+
+  .intro > div > p:not(.contactline) {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
 <style>
   :root {
     --bg: #ffffff;
@@ -85,7 +104,6 @@
   .intro p { margin: 0 0 16px; }
   .avatar {
   position: relative;
-  top: -110px;
   width: 220px;
   max-width: 100%;
   height: auto;
