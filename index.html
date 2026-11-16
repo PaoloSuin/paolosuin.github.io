@@ -290,10 +290,13 @@
   u.me { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; color: var(--ink); font-weight: 600; }
   .pub .a u.me { color: var(--ink); }
   .pagetitle { font: 650 40px/48px var(--display); letter-spacing: -0.02em; margin: 0; }
-  .yearblock { padding-top: 40px; }
-  .year { font: 650 22px/32px var(--display); color: var(--muted); margin: 0 0 8px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
-  .plist { list-style: none; margin: 0 0 0 22px; padding: 0; }
-  .plist li { padding-block: 16px; border-bottom: 1px solid var(--rule); }
+  /* Publications timeline — layout B from the tester */
+  .yearblock { position: relative; padding: 40px 0 0 105px; }
+  .year { position: absolute; left: 0; top: 40px; margin: 0; padding: 0; border: 0; font: 650 23px/32px var(--display); color: var(--accent); }
+  .yearblock::before { content: ""; position: absolute; left: 86px; top: 47px; bottom: 0; width: 1px; background: var(--rule); }
+  .plist { list-style: none; margin: 0; padding: 0; }
+  .plist li { position: relative; padding: 12px 0 24px; border-bottom: 1px solid var(--rule); }
+  .plist li::before { content: ""; position: absolute; left: -23px; top: 19px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--bg); }
   .plist li:last-child { border-bottom: 0; }
   .pt { font-weight: 600; font-size: 17px; line-height: 24px; margin: 0 0 4px; max-width: none; }
   .pa { color: var(--muted); font-size: 15px; line-height: 22px; }
@@ -330,6 +333,10 @@
     nav ul { gap: 14px; }
     section { padding-top: 40px; }
     .topics { grid-template-columns: 1fr; }
+    .yearblock { padding-left: 65px; }
+    .yearblock::before { left: 53px; }
+    .year { font-size: 18px; }
+    .plist li::before { left: -15px; }
   }
 </style>
 </head>
